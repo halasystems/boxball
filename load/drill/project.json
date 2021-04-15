@@ -1,0 +1,64 @@
+{
+  "projectKey": "PRJ-MPRKQW",
+  "dealerKey": "DC-TA2Q",
+  "dealerCompanyCode": "G",
+  "projectNumber": "1019",
+  "title": "Shepherd Street Reconfigure_Triage D230",
+  "description": "\n        Office Layout needed for existing to proposed-  Triage Room:  D230 - File have been added to PF\n        Existing product in Knoll- however we can layout in Answer- parts list will be needed for inventory and reconfigure\n        Labor Notes:\n        Phase 1:  Teardown all exisitng product and store at Storr Gboro Warehouse for the duration of construciton\n        Phase 2:  Pull inventory/install based on new proposed layout using exisitng parts\n        We will need to provide inital propsed layout for end-user approval\n    ",
+  "customerName": "WAKE FOREST UNIVERSITY BAPTIST",
+  "openDate": "2021-02-14T00:00:00",
+  "closeDate": null,
+  "isCustomerVisible": null,
+  "isProjectManaged": true,
+  "isMaster": null,
+  "createDate": null,
+  "isActive": null,
+  "bookingDate": null,
+  "installDate": null,
+  "isTemplate": false,
+  "parentProject": null,
+  "parentProjectReference": null,
+  "templateProject": null,
+  "templateProjectReference": null,
+  "address": {
+    "addressKey": "ADR-G82XJP",
+    "dealerKey": "DC-TA2Q",
+    "name": "Office",
+    "name2": "Oficina",
+    "lines": ["Av Santa Fe 4010"],
+    "city": "Buenos Aires",
+    "regionCode": "BA",
+    "postalCode": "1425",
+    "postalCodePrefix": "",
+    "countryCode": "AR",
+    "validated": false,
+    "functionalHash": "24ddbfcbd4682b32f861bbd7f1e84802",
+    "lastUpdated": "2021-03-18T12:28:44.847",
+    "remoteIdentifiers": [
+      {
+        "systemType": "Hedberg",
+        "clientSystemKey": "CS-TP8W",
+        "identifier": "ADR4J",
+        "url": null
+      }
+    ]
+  },
+  "enteredByContact": null,
+  "customer": null,
+  "salesReps": null,
+  "contacts": null,
+  "invoicedAmounts": null,
+  "backlogAmounts": null,
+  "budgetedAmounts": null,
+  "quotedAmounts": null,
+  "orderedAmounts": null,
+  "lastUpdated": "2021-03-24T19:05:30.004",
+  "remoteIdentifiers": [
+    {
+      "systemType": "Hedberg",
+      "clientSystemKey": "CS-TP8W",
+      "identifier": "PRJ-G1019",
+      "url": null
+    }
+  ]
+}

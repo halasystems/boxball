@@ -16,7 +16,7 @@ x-ddl:
     dockerfile: ddl.Dockerfile
     args:
       - VERSION
-  image: ${REPO}:ddl-${VERSION}
+  image: ${REPO}:ddl-${VERSION}  
 x-parquet:
   &parquet
   build:
@@ -53,16 +53,21 @@ x-clickhouse:
 
 x-drill:
   &drill
-  build:
-    context: load/drill
-    args:
-      - VERSION
-  image: ${REPO}:drill-${VERSION}
-  volumes:
-    - ~/boxball/drill:/data
-  depends_on:
-    - parquet
-    - ddl
+  container_name: drill
+  # build:
+  #   context: load/drill
+  #   args:
+  #     - VERSION
+  image: drill/apache-drill  
+  working_dir: /data
+  ports:
+    - 8047:8047
+    - 31010:31010 
+  volumes:    
+    - ./load/drill:/data
+  #depends_on:
+  #  - parquet
+  #  - ddl
 
 x-postgres:
   &postgres
