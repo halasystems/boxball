@@ -7,7 +7,9 @@ FROM pg as arrow
 # ARROW
 WORKDIR  /
 
+#--chown=postgres:postgre
 COPY ./install_arrow.sh . 
+RUN chmod +x ./install_arrow.sh
 RUN ./install_arrow.sh
 # RUN wget https://github.com/apache/arrow/archive/refs/heads/master.zip -O arrow.zip && \
 #     unzip arrow.zip && \
@@ -26,6 +28,8 @@ RUN wget https://github.com/adjust/parquet_fdw/archive/refs/heads/master.zip -O 
 
 WORKDIR /parquet_fdw
 RUN make install
+
+COPY ./ink-test-analytics-stream.parquet .
 
 #RUN create extension parquet_fdw; in psql
 

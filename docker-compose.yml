@@ -1,4 +1,5 @@
 version: '3.7'
+
 x-extract:
   &extract
   build:
@@ -95,6 +96,16 @@ x-postgres-cstore-fdw:
     - csv
     - ddl
 
+x-postgres-parquet-fdw:
+  &postgres-parquet-fdw
+  container_name: postgres_parquet_fdw
+  environment: 
+    - POSTGRES_PASSWORD="password"
+  build:
+    context: load/postgres_parquet_fdw
+  volumes:
+    - ./load/postgres-parquet-fdw:/var/lib/postgresql/data
+
 x-mysql:
   &mysql
   build:
@@ -171,6 +182,9 @@ services:
     << : *postgres-cstore-fdw
     image: ${REPO}:postgres-cstore-fdw-latest
 
+  postgres-parquet-fdw:
+    << : *postgres-parquet-fdw
+  
   mysql:
     << : *mysql
   mysql-latest:
