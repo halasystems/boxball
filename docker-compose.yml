@@ -1,5 +1,10 @@
 version: '3.7'
 
+volumes:
+  postgres_data: {}
+  pgadmin: {}
+
+
 x-extract:
   &extract
   build:
@@ -61,11 +66,12 @@ x-drill:
   #     - VERSION
   image: drill/apache-drill  
   working_dir: /data
+  command: [/bin/bash]
   ports:
     - 8047:8047
     - 31010:31010 
   volumes:    
-    - ./load/drill:/data
+    - ./load/drill/data:/data
   #depends_on:
   #  - parquet
   #  - ddl
@@ -96,15 +102,36 @@ x-postgres-cstore-fdw:
     - csv
     - ddl
 
+
+x-pgadmin:
+  &pgadmin
+  container_name: pgadmin
+  image: dpage/pgadmin4
+  depends_on: [postgres-parquet-fdw]
+  environment:
+    PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:-admin@test.com}
+    PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:-password}
+  volumes:    
+    - pgadmin:/var/lib/pgadmin
+    - ./load/postgres_parquet_fdw/files:/data
+  ports:
+    - '7500:80'
+  restart: unless-stopped
+        
 x-postgres-parquet-fdw:
   &postgres-parquet-fdw
   container_name: postgres_parquet_fdw
   environment: 
-    - POSTGRES_PASSWORD="password"
+    POSTGRES_USER: ${POSTGRES_USER:-postgres}
+    POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-password}
+  ports:
+    - 5432:5432
   build:
     context: load/postgres_parquet_fdw
   volumes:
-    - ./load/postgres-parquet-fdw:/var/lib/postgresql/data
+    - ./load/postgres_parquet_fdw/files:/data
+    - ./load/postgres_parquet_fdw/db-files:/var/lib/postgresql/data      
+    #  - postgres_data:/var/lib/postgresql/data
 
 x-mysql:
   &mysql
@@ -185,6 +212,9 @@ services:
   postgres-parquet-fdw:
     << : *postgres-parquet-fdw
   
+  pgadmin:
+    << : *pgadmin
+
   mysql:
     << : *mysql
   mysql-latest:
@@ -196,3 +226,4 @@ services:
   sqlite-latest:
     << : *sqlite
     image: ${REPO}:sqlite-latest
+

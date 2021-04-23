@@ -1,0 +1,205 @@
+{
+  "user": {
+    "id": "607577d86161d50b6dff5c09",
+    "name": "Faraz Sarwar",
+    "active": 1,
+    "admin": false,
+    "email": "farazsarwar112@gmail.com",
+    "urlShortCode": "CvN8AE9SH",
+    "cognitoIdentities": [
+      {
+        "name": "Faraz Sarwar",
+        "lastLogin": "2021-04-14T09:16:53.614Z",
+        "registeredOn": "2021-04-13T10:52:07.771Z",
+        "picture": "https://lh6.googleusercontent.com/-loSnNKWzPbM/AAAAAAAAAAI/AAAAAAAAAAA/AMZuucm4ls47pvjBcYchlIMWrlxzTSuAPA/s96-c/photo.jpg",
+        "oAuthType": "google"
+      }
+    ],
+    "lastLogin": "2021-04-14T09:16:53.614Z",
+    "registeredOn": "2021-04-13T10:52:07.771Z",
+    "influencerScore": 0,
+    "inkfluencedBy": {
+      "id": "5e904101f008d13d1a10e0f8",
+      "name": "Edgy Test",
+      "active": 1,
+      "admin": true,
+      "email": "edgytest01@gmail.com",
+      "userPlan": {
+        "id": "6035f43bb223833ebce1e7dd",
+        "name": "Non Paid Plan",
+        "yearlyPrice": 0,
+        "monthlyPrice": 0,
+        "isDefault": false,
+        "quota": {
+          "articles": 12,
+          "users": 12,
+          "keywords": 12,
+          "inkPoints": { "amount": 0, "topupCriteria": "", "unlimited": false }
+        }
+      },
+      "specialPlan": {
+        "id": "5e130bc4294f5876874fa46d",
+        "name": "INK FREE",
+        "yearlyPrice": 0,
+        "monthlyPrice": 0,
+        "isDefault": true,
+        "quota": {
+          "articles": 12,
+          "users": 12,
+          "keywords": 12,
+          "inkPoints": { "amount": 0, "topupCriteria": "", "unlimited": false }
+        }
+      },
+      "signupParams": {
+        "trafficSource": {
+          "id": "",
+          "utm_campaign": "",
+          "utm_medium": "",
+          "utm_source": "",
+          "utm_content": "",
+          "utm_term": ""
+        },
+        "additionalParams": { "platform": "mac" }
+      }
+    },
+    "inkfluencedDate": "",
+    "userPlan": {
+      "id": "5e130bc4294f5876874fa46d",
+      "name": "INK FREE",
+      "yearlyPrice": 0,
+      "monthlyPrice": 0,
+      "isDefault": true,
+      "quota": {
+        "articles": 1,
+        "users": 1,
+        "keywords": 1,
+        "inkPoints": {
+          "amount": 500,
+          "topupCriteria": "daily",
+          "unlimited": false
+        }
+      }
+    },
+    "specialPlan": {
+      "id": "",
+      "name": "",
+      "yearlyPrice": 0,
+      "monthlyPrice": 0,
+      "isDefault": false,
+      "quota": { "articles": 0, "users": 0, "keywords": 0, "inkPoints": {} }
+    },
+    "subscription": {
+      "id": "",
+      "status": "",
+      "canceledAt": "",
+      "currentPeriodStart": "",
+      "currentPeriodEnd": "",
+      "interval": "",
+      "sPlanId": "",
+      "amount": 0
+    },
+    "activation": false,
+    "timeToActivate": 0,
+    "inkPoints": 993,
+    "signupParams": {
+      "trafficSource": {
+        "id": "",
+        "utm_campaign": "",
+        "utm_medium": "",
+        "utm_source": "",
+        "utm_content": "",
+        "utm_term": ""
+      },
+      "additionalParams": {
+        "platform": "",
+        "ink_visit_id": "",
+        "referrer": "",
+        "session_id": ""
+      }
+    },
+    "stats": {
+      "wordChecked": 0,
+      "documentTaskCompleted": 0,
+      "wordTaskCompleted": 0,
+      "timeSpent": 0,
+      "clarity": 0,
+      "inkScore": 0,
+      "vocabulary": 0,
+      "topicsCompleted": 0,
+      "totalKeywords": 0,
+      "topicalRelevance": 0
+    },
+    "activeTimeInterval": {
+      "days": 2,
+      "weeks": 1,
+      "months": 1,
+      "currentDays": 2,
+      "maxDays": 2,
+      "currentWeeks": 1,
+      "maxWeeks": 1,
+      "currentMonths": 1,
+      "dayStreakMaintained": true,
+      "maxMonths": 1,
+      "monthStreakMaintained": true,
+      "weekStreakMaintained": true
+    },
+    "sessions": 0,
+    "contentScore": 0,
+    "contentScoreImproved": 0,
+    "ip": "101.53.248.35",
+    "location": {
+      "range": [1698035712, 1698035967],
+      "country": "PK",
+      "region": "",
+      "eu": "0",
+      "timezone": "Asia/Karachi",
+      "city": "",
+      "ll": [30, 70],
+      "metro": 0,
+      "area": 50
+    }
+  }
+},
+{
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36",
+  "uiLocale": "en-US",
+  "languages": ["en-US", "en"],
+  "referralURL": "",
+  "requestURL": "http://localhost:8000/twitter-bullet-list/",
+  "screenHeight": 1080,
+  "screenWidth": 1920,
+  "screenPixelDepth": 24,
+  "screenColorDepth": 24,
+  "orientation": { "angle": 0, "type": "landscape-primary" },
+  "scrollX": 0,
+  "scrollY": 0,
+  "windowHeight": 943,
+  "windowWidth": 1022,
+  "time": 1618398377077,
+  "utcOffset": 0,
+  "sessionId": "8d86a1ee-3d27-4619-683f-89a8e17ad7bc",
+  "sessionStartTime": 1618398377074,
+  "sessionEndTime": 0,
+  "appName": "TEXT_GENERATION",
+  "appVersion": "1.0.0",
+  "ip": "101.53.248.35",
+  "location": {
+    "range": [1698035712, 1698035967],
+    "country": "PK",
+    "region": "",
+    "eu": "0",
+    "timezone": "Asia/Karachi",
+    "city": "",
+    "ll": [30, 70],
+    "metro": 0,
+    "area": 50
+  },
+  "agent": {
+    "family": "Chrome",
+    "major": "89",
+    "minor": "0",
+    "patch": "4389",
+    "device": { "family": "Other", "major": "0", "minor": "0", "patch": "0" },
+    "os": { "family": "Mac OS X", "major": "11", "minor": "2", "patch": "3" }
+  }
+}

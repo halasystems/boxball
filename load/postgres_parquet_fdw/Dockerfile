@@ -29,14 +29,17 @@ RUN wget https://github.com/adjust/parquet_fdw/archive/refs/heads/master.zip -O 
 WORKDIR /parquet_fdw
 RUN make install
 
-COPY ./ink-test-analytics-stream.parquet .
+#COPY ./ink-test-analytics-stream.parquet .
 
 #RUN create extension parquet_fdw; in psql
 
+# COPY --chown=postgres:postgres --from=ddl /ddl/postgres_cstore_fdw.sql /docker-entrypoint-initdb.d/
+# COPY --chown=postgres:postgres --from=csv /transform/csv /data
+# RUN cat /docker-entrypoint-initdb.d/postgres_cstore_fdw.sql
 # WORKDIR /
 
 
 # RUN echo "shared_preload_libraries = 'cstore_fdw'" >> "${PGDATA}/postgresql.conf"
-# COPY --chown=postgres:postgres --from=ddl /ddl/postgres_cstore_fdw.sql /docker-entrypoint-initdb.d/
+COPY ./files/setup.sql /docker-entrypoint-initdb.d/
 # COPY --chown=postgres:postgres --from=csv /transform/csv /data
 # RUN cat /docker-entrypoint-initdb.d/postgres_cstore_fdw.sql
